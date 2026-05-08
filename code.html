@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="pt-BR">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>Portifolio Rafaela de Sousa</title>
+  <link rel="shortcut icon" href="imagens/code_icone.png" type="image/x-icon">
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&amp;family=Inter:wght@400;500&amp;family=Space+Grotesk:wght@400;600&amp;display=swap"
+    rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+    rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+    rel="stylesheet" />
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "error": "#ffb4ab",
+            "on-tertiary-container": "#2c3343",
+            "on-secondary-fixed": "#2c0051",
+            "tertiary-fixed": "#dce2f7",
+            "on-tertiary": "#293040",
+            "on-secondary-container": "#d6a9ff",
+            "tertiary-container": "#949baf",
+            "on-primary-fixed": "#001e2f",
+            "primary-fixed-dim": "#89ceff",
+            "outline-variant": "#3e4850",
+            "surface-container-low": "#0b1c30",
+            "on-error": "#690005",
+            "primary-container": "#0ea5e9",
+            "inverse-on-surface": "#213145",
+            "surface-container-lowest": "#000f21",
+            "inverse-primary": "#006591",
+            "inverse-surface": "#d3e4fe",
+            "error-container": "#93000a",
+            "on-surface-variant": "#bec8d2",
+            "tertiary": "#c0c6db",
+            "surface-container-highest": "#26364a",
+            "surface-variant": "#26364a",
+            "secondary-container": "#6f00be",
+            "surface-container-high": "#1b2b3f",
+            "surface-dim": "#031427",
+            "surface": "#031427",
+            "on-secondary-fixed-variant": "#6900b3",
+            "on-primary": "#00344d",
+            "on-surface": "#d3e4fe",
+            "on-error-container": "#ffdad6",
+            "on-tertiary-fixed": "#141b2b",
+            "background": "#031427",
+            "surface-bright": "#2a3a4f",
+            "on-primary-container": "#003751",
+            "primary-fixed": "#c9e6ff",
+            "secondary-fixed": "#f0dbff",
+            "on-tertiary-fixed-variant": "#404758",
+            "on-secondary": "#490080",
+            "outline": "#88929b",
+            "secondary": "#ddb7ff",
+            "surface-tint": "#89ceff",
+            "secondary-fixed-dim": "#ddb7ff",
+            "primary": "#89ceff",
+            "surface-container": "#102034",
+            "tertiary-fixed-dim": "#c0c6db",
+            "on-background": "#d3e4fe",
+            "on-primary-fixed-variant": "#004c6e"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+          "spacing": {
+            "xl": "8rem",
+            "gutter": "24px",
+            "lg": "4rem",
+            "sm": "1rem",
+            "md": "2rem",
+            "unit": "4px",
+            "xs": "0.5rem",
+            "max-width": "1280px"
+          },
+          "fontFamily": {
+            "body-lg": ["Inter"],
+            "label-caps": ["Space Grotesk"],
+            "body-md": ["Inter"],
+            "headline-lg": ["Montserrat"],
+            "headline-md": ["Montserrat"],
+            "mono-code": ["Space Grotesk"],
+            "headline-xl": ["Montserrat"]
+          },
+          "fontSize": {
+            "body-lg": ["1.125rem", { "lineHeight": "1.7", "fontWeight": "400" }],
+            "label-caps": ["0.75rem", { "lineHeight": "1", "letterSpacing": "0.1em", "fontWeight": "600" }],
+            "body-md": ["1rem", { "lineHeight": "1.6", "fontWeight": "400" }],
+            "headline-lg": ["2.5rem", { "lineHeight": "1.2", "fontWeight": "700" }],
+            "headline-md": ["1.5rem", { "lineHeight": "1.4", "fontWeight": "600" }],
+            "mono-code": ["0.875rem", { "lineHeight": "1.5", "fontWeight": "400" }],
+            "headline-xl": ["4rem", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "800" }]
+          }
+        },
+      },
+    }
+  </script>
+  <style>
+    .glass-card {
+      background: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(16px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .glass-card:hover {
+      border-color: rgba(137, 206, 255, 0.4);
+      box-shadow: 0 0 20px rgba(137, 206, 255, 0.1);
+    }
+
+    .hero-glow {
+      background: radial-gradient(circle at 50% 50%, rgba(137, 206, 255, 0.15) 0%, transparent 70%);
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    .img_rafaela {
+      width: 350px;
+      border-radius: 20px;
+      object-fit: cover;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      box-shadow: 0 0 30px rgba(137, 206, 255, 0.15);
+    }
+
+
+  </style>
+</head>
+
+<body class="bg-background text-on-surface font-body-md overflow-x-hidden">
+  <!-- TopNavBar -->
+  <header
+    class="fixed top-0 w-full z-50 bg-surface/30 backdrop-blur-xl border-b border-white/10 shadow-[0_8px_32px_0_rgba(137,206,255,0.1)]">
+    <nav class="flex justify-between items-center h-20 px-gutter max-w-max-width mx-auto">
+      <div class="font-headline-md text-headline-md font-extrabold tracking-tighter text-on-surface">Rafaela de Sousa
+      </div>
+      <div class="hidden md:flex items-center gap-md">
+        <a class="text-primary font-bold border-b-2 border-primary pb-1 font-label-caps text-label-caps"
+          href="#work">Work</a>
+        <a class="text-on-surface-variant font-medium hover:text-on-surface transition-colors font-label-caps text-label-caps"
+          href="#skills">Skills</a>
+        <a class="text-on-surface-variant font-medium hover:text-on-surface transition-colors font-label-caps text-label-caps"
+          href="#about">About</a>
+        <a class="bg-primary text-on-primary px-sm py-xs rounded-lg hover:brightness-110 active:scale-95 transition-all font-label-caps text-label-caps"
+          href="#contact">Contact Me</a>
+      </div>
+      <button class="md:hidden text-primary">
+        <span class="material-symbols-outlined">menu</span>
+      </button>
+    </nav>
+  </header>
+  <main class="pt-20">
+    <!-- Hero Section -->
+    <section class="relative min-h-[90vh] flex items-center justify-center py-xl overflow-hidden hero-glow">
+      <div class="max-w-max-width mx-auto px-gutter grid grid-cols-1 md:grid-cols-2 gap-lg items-center relative z-10">
+        <div class="space-y-md">
+          <h1 class="font-headline-xl text-headline-xl">
+            <span class="text-primary block mb-xs">Front-End Developer</span>
+            Rafaela de Sousa
+          </h1>
+          <p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl">
+            Crafting high-end web experiences where technical precision meets ethereal design. Dedicated to building
+            interfaces that feel as sophisticated as they perform.
+          </p>
+          <div class="flex flex-wrap gap-sm pt-sm">
+            <a class="px-lg py-sm rounded-xl bg-gradient-to-r from-primary to-secondary text-on-primary font-bold shadow-lg hover:shadow-primary/20 transition-all active:scale-95"
+              href="#work">Ver Projetos</a>
+            <a class="px-lg py-sm rounded-xl border border-primary/40 text-primary hover:bg-primary/10 transition-all active:scale-95 glass-card"
+              href="#contact">Entrar em Contato</a>
+          </div>
+        </div>
+        <div class="flex justify-center md:justify-end">
+          <div class="relative flex items-center justify-center">
+            <div class="w-full h-full flex items-center justify-center">
+              <span class="material-symbols-outlined text-primary text-5xl mb-xs">account_circle</span>
+              <p class="font-label-caps text-label-caps text-on-surface-variant"><img src="imagens/rafaela_foto.jpeg"
+                  alt="foto rafaela" class="img_rafaela"> </p>
+            </div>
+            <div
+              class="absolute -bottom-4 -right-4 bg-primary/20 backdrop-blur-xl p-sm rounded-xl border border-white/10 shadow-xl">
+              <div class="flex items-center gap-xs">
+                <span class="w-3 h-3 bg-green-400 rounded-full animate-pulse"></span>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- About Me / Sobre Mim -->
+    <section class="py-xl" id="about">
+      <div class="max-w-max-width mx-auto px-gutter">
+        <div class="glass-card rounded-xl p-md md:p-xl flex flex-col md:flex-row gap-lg items-center">
+          <div class="md:w-1/3">
+            <h2 class="font-headline-lg text-headline-lg text-primary mb-sm">Sobre Mim</h2>
+            <div class="h-1 w-20 bg-secondary rounded-full"></div>
+          </div>
+          <div class="md:w-2/3 space-y-sm">
+            <p class="font-body-lg text-body-lg text-on-surface-variant">
+              Sou uma desenvolvedora front-end apaixonada pela intersecção entre o código limpo e a experiência do
+              usuário intuitiva. Meu foco está em transformar designs complexos em realidades interativas, fluidas e
+              responsivas.
+            </p>
+            <p class="font-body-md text-body-md text-on-surface-variant">
+              Com um olhar atento para o UI/UX, busco constantemente as tecnologias mais modernas para garantir que cada
+              projeto não apenas funcione perfeitamente, mas também encante visualmente. Acredito que a tecnologia deve
+              ser invisível, permitindo que a experiência do usuário brilhe.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Skills / Habilidades -->
+    <section class="py-xl bg-surface-container-lowest/30" id="skills">
+      <div class="max-w-max-width mx-auto px-gutter text-center mb-lg">
+        <h2 class="font-headline-lg text-headline-lg mb-xs">Especialidades Técnicas</h2>
+        <p class="text-on-surface-variant font-body-md">Ferramentas que utilizo para dar vida às ideias</p>
+      </div>
+      <div class="max-w-max-width mx-auto px-gutter grid grid-cols-2 md:grid-cols-5 gap-md">
+        <!-- Skill 1 -->
+        <div class="glass-card p-md rounded-xl text-center group transition-transform hover:-translate-y-2">
+          <span class="material-symbols-outlined text-primary text-4xl mb-sm block">javascript</span>
+          <h3 class="font-label-caps text-label-caps mb-sm">JavaScript</h3>
+          <div class="w-full bg-white/10 h-1.5 rounded-full overflow-hidden">
+            <div class="bg-primary h-full w-[90%] rounded-full"></div>
+          </div>
+        </div>
+        <!-- Skill 2 -->
+        <div class="glass-card p-md rounded-xl text-center group transition-transform hover:-translate-y-2">
+          <span class="material-symbols-outlined text-primary text-4xl mb-sm block">html</span>
+          <h3 class="font-label-caps text-label-caps mb-sm">HTML5</h3>
+          <div class="w-full bg-white/10 h-1.5 rounded-full overflow-hidden">
+            <div class="bg-primary h-full w-[95%] rounded-full"></div>
+          </div>
+        </div>
+        <!-- Skill 3 -->
+        <div class="glass-card p-md rounded-xl text-center group transition-transform hover:-translate-y-2">
+          <span class="material-symbols-outlined text-primary text-4xl mb-sm block">css</span>
+          <h3 class="font-label-caps text-label-caps mb-sm">CSS3</h3>
+          <div class="w-full bg-white/10 h-1.5 rounded-full overflow-hidden">
+            <div class="bg-primary h-full w-[92%] rounded-full"></div>
+          </div>
+        </div>
+        <!-- Skill 4 -->
+        <div class="glass-card p-md rounded-xl text-center group transition-transform hover:-translate-y-2">
+          <span class="material-symbols-outlined text-primary text-4xl mb-sm block">grid_view</span>
+          <h3 class="font-label-caps text-label-caps mb-sm">Bootstrap</h3>
+          <div class="w-full bg-white/10 h-1.5 rounded-full overflow-hidden">
+            <div class="bg-primary h-full w-[85%] rounded-full"></div>
+          </div>
+        </div>
+        <!-- Skill 5 -->
+        <div class="glass-card p-md rounded-xl text-center group transition-transform hover:-translate-y-2">
+          <span class="material-symbols-outlined text-primary text-4xl mb-sm block">code</span>
+          <h3 class="font-label-caps text-label-caps mb-sm">Python</h3>
+          <div class="w-full bg-white/10 h-1.5 rounded-full overflow-hidden">
+            <div class="bg-primary h-full w-[75%] rounded-full"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects / Projetos -->
+    <section class="py-xl" id="work">
+      <div class="max-w-max-width mx-auto px-gutter mb-lg">
+        <h2 class="font-headline-lg text-headline-lg">Portfólio em Destaque</h2>
+        <p class="text-on-surface-variant font-body-md">Explorações em design e desenvolvimento</p>
+      </div>
+      <div class="max-w-max-width mx-auto px-gutter grid grid-cols-1 md:grid-cols-2 gap-md">
+
+        <!-- Project 1 -->
+        <div class="glass-card rounded-xl overflow-hidden group">
+          <div class="aspect-video relative overflow-hidden">
+            <img alt="Restaurante Sabor"
+              class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+              src="imagens/site_hamburgueria_sabor_restaurante_foto.png" />
+
+            <div
+              class="absolute inset-0 bg-background/60 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center backdrop-blur-sm">
+              <a class="px-md py-sm bg-primary text-on-primary rounded-full font-label-caps text-label-caps flex items-center gap-xs"
+                href="https://sabor-restaurante.netlify.app/" target="_blank">
+                VISUALIZAR LIVE <span class="material-symbols-outlined">open_in_new</span>
+              </a>
+            </div>
+          </div>
+
+          <div class="p-md">
+            <div class="flex gap-xs mb-xs">
+              <span
+                class="px-xs py-[2px] rounded border border-secondary/30 text-[10px] font-label-caps text-secondary">HTML/CSS</span>
+              <span
+                class="px-xs py-[2px] rounded border border-secondary/30 text-[10px] font-label-caps text-secondary">JS</span>
+            </div>
+            <h3 class="font-headline-md text-headline-md mb-xs">Restaurante Sabor</h3>
+            <p class="font-body-md text-on-surface-variant mb-md">Uma experiência gastronômica digital elegante com
+              sistema de reservas online e menu interativo dinâmico.</p>
+            <a class="text-primary font-bold hover:underline flex items-center gap-xs"
+              href="https://sabor-restaurante.netlify.app/">
+              Ver Projeto <span class="material-symbols-outlined text-sm">arrow_forward</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Project 2
+        <div class="glass-card rounded-xl overflow-hidden group">
+          <div class="aspect-video relative overflow-hidden">
+            <img alt="Café Online"
+              class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+              src="https://placeholder.pics/svg/300" />
+            <div
+              class="absolute inset-0 bg-background/60 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center backdrop-blur-sm">
+              <a class="px-md py-sm bg-primary text-on-primary rounded-full font-label-caps text-label-caps flex items-center gap-xs"
+                href="https://cafeonlin.netlify.app/" target="_blank">
+                VISUALIZAR LIVE <span class="material-symbols-outlined">open_in_new</span>
+              </a>
+            </div>
+          </div>
+
+
+          <div class="p-md">
+            <div class="flex gap-xs mb-xs">
+              <span
+                class="px-xs py-[2px] rounded border border-secondary/30 text-[10px] font-label-caps text-secondary">RESPONSIVE</span>
+              <span
+                class="px-xs py-[2px] rounded border border-secondary/30 text-[10px] font-label-caps text-secondary">UI/UX</span>
+            </div>
+            <h3 class="font-headline-md text-headline-md mb-xs">Café Online</h3>
+            <p class="font-body-md text-on-surface-variant mb-md">Interface minimalista e acolhedora para uma cafeteria
+              moderna, focada em conversão e navegação intuitiva.</p>
+            <a class="text-primary font-bold hover:underline flex items-center gap-xs"
+              href="https://cafeonlin.netlify.app/">
+              Ver Projeto <span class="material-symbols-outlined text-sm">arrow_forward</span>
+            </a>
+          </div>
+        </div> -->
+
+
+        <!-- Project 3 -->
+        <div class="glass-card rounded-xl overflow-hidden group">
+          <div class="aspect-video relative overflow-hidden">
+            <img alt="Gerenciador de Dívidas"
+              class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+              src="imagens/projeto_gerenciador_dividas_foto.png" />
+            <div
+              class="absolute inset-0 bg-background/60 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center backdrop-blur-sm">
+              <a class="px-md py-sm bg-primary text-on-primary rounded-full font-label-caps text-label-caps flex items-center gap-xs"
+                href="https://gerenciadordividas.netlify.app/" target="_blank">
+                VISUALIZAR LIVE <span class="material-symbols-outlined">open_in_new</span>
+              </a>
+            </div>
+          </div>
+          <div class="p-md">
+            <div class="flex gap-xs mb-xs">
+              <span
+                class="px-xs py-[2px] rounded border border-secondary/30 text-[10px] font-label-caps text-secondary">UTILITY</span>
+              <span
+                class="px-xs py-[2px] rounded border border-secondary/30 text-[10px] font-label-caps text-secondary">WEB
+                APP</span>
+            </div>
+            <h3 class="font-headline-md text-headline-md mb-xs">Gerenciador de Dívidas</h3>
+            <p class="font-body-md text-on-surface-variant mb-md">Ferramenta prática de gestão financeira pessoal com
+              cálculos automáticos.</p>
+            <a class="text-primary font-bold hover:underline flex items-center gap-xs"
+              href="https://gerenciadordividas.netlify.app/">
+              Ver Projeto <span class="material-symbols-outlined text-sm">arrow_forward</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Project 4 -->
+        <div class="glass-card rounded-xl overflow-hidden group">
+          <div class="aspect-video relative overflow-hidden">
+            <img alt="Projeto Moderno"
+              class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+              src="imagens/projeto_verificador_numero_foto.png" />
+            <div
+              class="absolute inset-0 bg-background/60 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center backdrop-blur-sm">
+              <a class="px-md py-sm bg-primary text-on-primary rounded-full font-label-caps text-label-caps flex items-center gap-xs"
+                href="https://classy-entremet-a7b2a6.netlify.app/" target="_blank">
+                VISUALIZAR LIVE <span class="material-symbols-outlined">open_in_new</span>
+              </a>
+            </div>
+          </div>
+          <div class="p-md">
+            <div class="flex gap-xs mb-xs">
+              <span
+                class="px-xs py-[2px] rounded border border-secondary/30 text-[10px] font-label-caps text-secondary">CONCEPT</span>
+              <span
+                class="px-xs py-[2px] rounded border border-secondary/30 text-[10px] font-label-caps text-secondary">HIGH-END</span>
+            </div>
+            <h3 class="font-headline-md text-headline-md mb-xs">Projeto Vericador de número</h3>
+            <p class="font-body-md text-on-surface-variant mb-md">Estudo avançado de layout e interatividade, explorando
+              javascript e verificação de numeros.</p>
+            <a class="text-primary font-bold hover:underline flex items-center gap-xs"
+              href="https://classy-entremet-a7b2a6.netlify.app/">
+              Ver Projeto <span class="material-symbols-outlined text-sm">arrow_forward</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+
+    </section>
+    <!-- Contact Section / Contato -->
+    <section class="py-xl relative" id="contact">
+      <div class="max-w-max-width mx-auto px-gutter grid grid-cols-1 md:grid-cols-2 gap-lg">
+        <div class="space-y-md">
+          <h2 class="font-headline-lg text-headline-lg">Vamos Conversar?</h2>
+          <p class="text-on-surface-variant font-body-lg">Estou sempre aberta a novos desafios e colaborações
+            inovadoras. Entre em contato e vamos criar algo incrível juntos.</p>
+          <div class="space-y-sm">
+            <a class="flex items-center gap-sm glass-card p-sm rounded-xl hover:bg-primary/5 transition-colors group"
+              href="mailto:rafaelasousa201397@gmail.com">
+              <div
+                class="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-on-primary transition-all">
+                <span class="material-symbols-outlined">mail</span>
+              </div>
+              <div>
+                <p class="font-label-caps text-[10px] text-on-surface-variant">EMAIL</p>
+                <p class="font-body-md font-bold">rafaelasousa201397@gmail.com</p>
+              </div>
+            </a>
+            <a class="flex items-center gap-sm glass-card p-sm rounded-xl hover:bg-primary/5 transition-colors group"
+              href="tel:11997658760">
+              <div
+                class="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-on-primary transition-all">
+                <span class="material-symbols-outlined">call</span>
+              </div>
+              <div>
+                <p class="font-label-caps text-[10px] text-on-surface-variant">PHONE</p>
+                <p class="font-body-md font-bold">11 99765-8760</p>
+              </div>
+            </a>
+          </div>
+          <div class="flex gap-sm">
+            <button
+              class="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center hover:bg-primary/20 transition-all">
+              <img alt="LinkedIn" class="w-6 h-6"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCJyCtIaLd8qhE53tJYUd4mEd4mlpJgKSKOK-UXYJIDEAmaoDcPCAjIry0ohr11cmcNbPYM7KnDE6KKifN5QAObE8gpVg2DM1OqCKUmUkcfM5qeukHGEGhbdT8LSlZuZaWnf_DyV35iyZq3E-eJDKAxv3_xtQ-AMz7nLui74iu_u9DhU7Ml5a7UXz9xOA-nEpLVtHIH1R-L90HaPhPc_M40CtdQMbaC0QdKBskzgBy79jLPXb4NKh8XRLRt-6gOJiCCAnSw_2YTNoEH" />
+            </button>
+            <button
+              class="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center hover:bg-primary/20 transition-all">
+              <img alt="GitHub" class="w-6 h-6"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDV5djZuezJtHdqRspn1B1qezejm7Tx1yLfydENc0v0Pq7KRTuwCxySmp3H3l1jkJ2tcFm6Muxpf9ryvX3W260DFqs-dmr1I7VU4gPEqZ2inLpBYhW6qbgQq5ssZo4pBXxpoBh5zJHZ4tNKH8R5QzGouRIWjfPBVGt23gGRqi71jAAt7lZdDut28zbnMaK-IvV2xmo2Deat1-GVi8oAodglgBM7Muwo-SS8nYzqII5bEd5H5_3rOhiGgRH9tE4a_ocxdYeaDhh4j3RA" />
+            </button>
+            <button
+              class="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center hover:bg-primary/20 transition-all">
+              <img alt="Twitter" class="w-6 h-6"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuAcW_ydM1oC-MAcsziRbpdDhaqBiCwaXa_tgGwJNVsckQi6QXXbqj8MQO4zWH4mghe1-b1tmkOj-FwnNKHQrgPUEPSRn5ukOOAEwwD9eHUbe2OPqyFMIUTj60cmTQhnicueJtBdRh5l1UKrHYjayPYwEWAgrdNtMzgTNiFbeEK2SZBd5lqlpEPsxzCXW9lT95xoopb3kE-AMoyt9kDkUF3HrNMDWFn7POLZ0F_GaYM7kYusyqKAUuJTpVzAPFuOB2o1PhRKRKV0kfKu" />
+            </button>
+          </div>
+        </div>
+        <div class="glass-card p-md rounded-2xl">
+          <form action="#" class="space-y-sm" id="whatsapp-form" method="POST">
+            <div class="grid grid-cols-2 gap-sm">
+              <div class="space-y-xs">
+                <label class="font-label-caps text-label-caps text-on-surface-variant ml-xs">NOME</label>
+                <input
+                  class="w-full bg-white/5 border border-white/10 rounded-xl px-sm py-xs text-on-surface focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all"
+                  id="form-name" placeholder="Seu nome" type="text" />
+              </div>
+              <div class="space-y-xs">
+                <label class="font-label-caps text-label-caps text-on-surface-variant ml-xs">ASSUNTO</label>
+                <input
+                  class="w-full bg-white/5 border border-white/10 rounded-xl px-sm py-xs text-on-surface focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all"
+                  id="form-subject" placeholder="Trabalho" type="text" />
+              </div>
+            </div>
+            <div class="space-y-xs">
+              <label class="font-label-caps text-label-caps text-on-surface-variant ml-xs">EMAIL</label>
+              <input
+                class="w-full bg-white/5 border border-white/10 rounded-xl px-sm py-xs text-on-surface focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all"
+                placeholder="seu@email.com" type="email" />
+            </div>
+            <div class="space-y-xs">
+              <label class="font-label-caps text-label-caps text-on-surface-variant ml-xs">MENSAGEM</label>
+              <textarea
+                class="w-full bg-white/5 border border-white/10 rounded-xl px-sm py-xs text-on-surface focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all resize-none"
+                id="form-message" placeholder="Como posso te ajudar?" rows="4"></textarea>
+            </div>
+            <button
+              class="w-full py-sm bg-primary text-on-primary font-bold rounded-xl hover:brightness-110 active:scale-[0.98] transition-all shadow-lg shadow-primary/10"
+              type="submit">Enviar Mensagem</button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+  <!-- Footer -->
+  <footer class="w-full py-xl bg-surface-container-lowest/50 backdrop-blur-md border-t border-white/5">
+    <div class="flex flex-col md:flex-row justify-between items-center px-gutter max-w-max-width mx-auto gap-md">
+      <div class="font-headline-md text-headline-md text-primary font-bold">Rafaela.</div>
+      <div class="font-body-md text-body-md text-on-tertiary-fixed-variant text-center">
+        © 2024 Rafaela de Sousa. Built with precision.
+      </div>
+      <div class="flex gap-md">
+        <a class="text-on-tertiary-fixed-variant hover:text-primary transition-colors duration-300 font-label-caps text-label-caps"
+          href="#">GitHub</a>
+        <a class="text-on-tertiary-fixed-variant hover:text-primary transition-colors duration-300 font-label-caps text-label-caps"
+          href="#">LinkedIn</a>
+        <a class="text-on-tertiary-fixed-variant hover:text-primary transition-colors duration-300 font-label-caps text-label-caps"
+          href="#">Twitter</a>
+      </div>
+    </div>
+  </footer>
+  <!-- Back to top button -->
+  <a class="fixed bottom-gutter right-gutter w-12 h-12 bg-primary/20 backdrop-blur-xl border border-white/10 rounded-full flex items-center justify-center text-primary hover:bg-primary hover:text-on-primary transition-all z-40 group"
+    href="#">
+    <span class="material-symbols-outlined group-hover:-translate-y-1 transition-transform">arrow_upward</span>
+  </a>
+  <script>
+    document.getElementById('whatsapp-form').addEventListener('submit', function (e) {
+      e.preventDefault();
+      const name = document.getElementById('form-name').value;
+      const subject = document.getElementById('form-subject').value;
+      const message = document.getElementById('form-message').value;
+      const phone = '5511997658760';
+      const text = encodeURIComponent(`Olá! Meu nome é ${name}. \nAssunto: ${subject} \n\n${message}`);
+      window.open(`https://wa.me/${phone}?text=${text}`, '_blank');
+    });
+  </script>
+</body>
+
+</html>
